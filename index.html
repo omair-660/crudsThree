@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="my-4">
+                <div class="form-group mb-4">
+                    <label class="mb-2" for="nameInput">Site Name</label>
+                    <input type="text" id="nameInput" placeholder="Product name" class="form-control">
+                </div>
+            </div>
+            <div class="my-4">
+                <div class="form-group mb-4">
+                    <label class="mb-2" for="urlInput">Url Site</label>
+                    <input type="url" id="urlInput" placeholder="Product name" class="form-control">
+                </div>
+            </div>
+            <button id="addBtn" class="btn btn-outline-primary w-100" id="addBtn">Add Link</button>
+            <button id="updateBtn" class="btn btn-outline-primary w-100 d-none" id="addBtn">Update Link</button>
+            <button id="deletaBtn" class="btn btn-outline-danger my-3 w-100 d-none">Deleta All</button>
+
+             
+                <!-- component -->
+<div class="relative mr-6 my-2">
+    <input id="serch" type="search" class="bg-purple-white shadow rounded border-0 p-3" placeholder="Search by name...">
+    <div class="absolute pin-r pin-t mt-3 mr-4 text-purple-lighter">
+    </div>
+  </div>
+            
+            <table class="table table-dark table-striped my-5">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Website Name</th>
+                      <th scope="col">Visit</th>
+                      <th scope="col">Delete</th>
+                      <th scope="col">Update</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   
+                </tbody>
+              </table>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
