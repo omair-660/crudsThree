@@ -95,7 +95,7 @@ deletaBtn.addEventListener("click",function () {
 function count() {
     if (content.length > 0) {
         deletaBtn.classList.remove("d-none");
-        deletaBtn.innerHTML = `Delete All (${total})`;
+        deletaBtn.innerHTML = `Delete All (${total+1})`;
     }
 }
 count()
