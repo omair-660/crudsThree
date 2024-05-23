@@ -70,14 +70,28 @@ h1:hover::after{
             }
 }
 h3 {
-    font-size: 25px; 
-    background-image:linear-gradient(to right, #f8fffe, #00bcd4,#2dff3d,#fff);
+    letter-spacing: 0px;
+    transition: 0.5s;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #f8fffe, #00bcd4,#2dff3d,#fff);
     -webkit-background-clip: text;
-    background-clip: text; 
+    background-clip: text;
     color: transparent;
     font-family: "Righteous", sans-serif;
     font-weight: 500;
     border-top: 1px dashed #eee;
+    animation: 2s letr ease;
+}
+@keyframes letr {
+    0%{
+    letter-spacing: 0px;
+    }
+    50%{
+        letter-spacing: -12px;
+        }
+        100%{
+            letter-spacing: 0px;
+            }
 }
 #addBtn,#updateBtn{color: #FFF;}
 .btnn {
@@ -139,3 +153,11 @@ i#searchIcon.open {
     background: #92e49a;
     color: rgb(61, 61, 61);
 }
+.bg-gradientt{
+    background-image:  linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    transition: 0.5s;
+}
+.bg-gradientt:hover{
+    background-image:  linear-gradient(66deg, rgba(255, 255, 255, 0.15) ,rgba(255, 255, 255, 0));
+ }
+ 
