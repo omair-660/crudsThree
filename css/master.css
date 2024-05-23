@@ -113,7 +113,12 @@ i#searchIcon {
     top: 50%;
     left: 1%;
     transition: 0.6s;
+    cursor: pointer;
 }
 i#searchIcon.open {
     left:90%;
+}
+::selection {
+    background: #92e49a;
+    color: rgb(61, 61, 61);
 }

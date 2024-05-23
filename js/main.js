@@ -64,12 +64,14 @@ count()
 // show function
 var total;
 function display() {
+    var index ;
     cartona = "";
 
     for (var i = 0; i < content.length; i++) {
+        index = i+1;
         cartona += `
         <tr>
-        <th scope="row">${i}</th>
+        <th scope="row">${index}</th>
         <td>${content[i].name}</td>
 
         <td><a href="${content[i].url}" target="_blank"><button class="btn btn-info")">view</button></a></td>
@@ -281,6 +283,7 @@ searchIcon.onclick = function () {
 }
 serch.onclick = function () {
     serch.classList.add("w-100");
+    searchIcon.classList.add("open");
 }
 
 function validateForm(e) {
