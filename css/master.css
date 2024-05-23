@@ -108,3 +108,12 @@ h3 {
 .swal2-styled.swal2-confirm {
     background-color: #57ae5b;
 }
+i#searchIcon {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transition: 0.6s;
+}
+i#searchIcon.open {
+    left:90%;
+}

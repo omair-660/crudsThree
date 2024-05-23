@@ -14,6 +14,7 @@ if (localStorage.content != null) {
     content = [];
 
 }
+//add function
 
 addBtn.addEventListener("click", function () {
     if (nameInput.value === "" || urlInput.value === "" || nameInput.classList.contains("is-invalid") || urlInput.classList.contains("is-invalid")){
@@ -29,7 +30,7 @@ addBtn.addEventListener("click", function () {
         Swal.fire({
           title: "The link has been added successfully",
           html:`link Name <span class="bg-success text-white fw-bold p-2">${nameInput.value}</span>`,
-          timer: 2000,
+          timer: 1200,
           timerProgressBar: true,
           didOpen: () => {
             Swal.showLoading();
@@ -58,7 +59,9 @@ addBtn.addEventListener("click", function () {
 clear()
 count()
 })
+//*****************************************//
 
+// show function
 var total;
 function display() {
     cartona = "";
@@ -80,7 +83,9 @@ function display() {
     }
 }
 display();
+//*****************************************//
 
+//delete function
 function deletItem(i){
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -120,14 +125,17 @@ function deletItem(i){
         }
       });
 }
+//*****************************************//
 
-
+//clearData function
 function clear() {
     nameInput.value=null;
     urlInput.value=null;
 }
-var indexUpdate ;
 
+//update function
+
+var indexUpdate ;
 function updateItem(i) {
 
     nameInput.value = content[i].name ;
@@ -149,9 +157,9 @@ updateBtn.addEventListener("click", function () {
     }else{
         let timerInterval;
         Swal.fire({
-          title: "The link has been added successfully",
+          title: "The link has been updated successfully",
           html:`link Name <span class="bg-success text-white fw-bold p-2">${nameInput.value}</span>`,
-          timer: 2000,
+          timer: 1200,
           timerProgressBar: true,
           didOpen: () => {
             Swal.showLoading();
@@ -180,6 +188,9 @@ updateBtn.addEventListener("click", function () {
     clear()
 
 });
+//*****************************************//
+
+//deleteAll function
 
 deletaBtn.addEventListener("click",function () {
     const swalWithBootstrapButtons = Swal.mixin({
@@ -222,6 +233,8 @@ deletaBtn.addEventListener("click",function () {
       });
    
 })
+//*****************************************//
+
 function count() {
     if (content.length > 0) {
         deletaBtn.classList.remove("d-none");
@@ -229,6 +242,9 @@ function count() {
     }
 }
 count()
+//*****************************************//
+
+//search function
 
 serch.addEventListener("input", function() {
     var term = serch.value;
@@ -261,6 +277,7 @@ var searchIcon = document.querySelector("#searchIcon");
 
 searchIcon.onclick = function () {
     serch.classList.toggle("w-100");
+    searchIcon.classList.toggle("open");
 }
 serch.onclick = function () {
     serch.classList.add("w-100");
@@ -268,9 +285,9 @@ serch.onclick = function () {
 
 function validateForm(e) {
     var regex = {
-        nameInput : /^[a-z]{4,9}$/,
-        urlInput : /^(https:\/\/)[a-z](.com)$/
-    }
+        nameInput : /^[a-zA-Z]{4,10}$/,
+        urlInput : /^https:\/\/[a-zA-Z0-9\-]+\.com$/,
+    };
     if (regex[e.id].test(e.value)) {
         e.classList.remove("is-invalid");
         e.classList.add("is-valid");
@@ -279,4 +296,4 @@ function validateForm(e) {
         e.classList.remove("is-valid");
         e.classList.add("is-invalid");
     }
-}
+};
