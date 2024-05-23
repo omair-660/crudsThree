@@ -133,6 +133,11 @@ function deletItem(i){
 function clear() {
     nameInput.value=null;
     urlInput.value=null;
+
+
+    nameInput.classList.remove("is-valid", "is-invalid"); 
+    urlInput.classList.remove("is-valid", "is-invalid");
+
 }
 
 //update function
