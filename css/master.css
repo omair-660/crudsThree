@@ -1,0 +1,110 @@
+body{
+    background: #1f1f1f;
+}
+::placeholder{
+    color: #f0f8ffc2!important;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 25%);
+}
+#addBtn{
+    color: #d6e7ff;
+}
+label,label i,#searchIcon,h1{
+    color: aliceblue;
+}
+label i::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: #30455a;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    margin: 0 6px;
+}
+input{
+    transition: 0.5s;
+}
+h1{
+    font-family: "Pacifico", cursive;
+    position: relative;
+    width: fit-content;
+}
+h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-image: linear-gradient(to right, #17555c, #1f292b,#194e1e,#2e9435);
+    width: 100%;
+    height: 16px;
+    z-index: -1;
+    border-radius: 4px;
+    transition: height 0.6s ease
+}
+h1:hover::after{
+    height: 80%;
+    
+}
+h3 {
+    font-size: 25px; 
+    background-image:linear-gradient(to right, #f8fffe, #00bcd4,#2dff3d,#fff);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    font-family: "Righteous", sans-serif;
+    font-weight: 500;
+    border-top: 1px dashed #eee;
+}
+#addBtn{color: #FFF;}
+.btnn {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+    font-size: 22px;
+}
+
+.btnn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to right, #17555c, #1f292b,#194e1e,#2e9435);
+    z-index: -1;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.btnn::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #1f1f1f; 
+    z-index: -1;
+    border-radius: 5px;
+    transition: 1s;
+}
+.btnn:hover::after {
+    background: linear-gradient(to right,  #234742, #348f9b,#319639,#103113);
+}
+.swal2-styled.swal2-confirm {
+    background-color: #57ae5b;
+}
