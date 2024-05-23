@@ -76,7 +76,7 @@ function display() {
 
         <td><a href="${content[i].url}" target="_blank"><button class="btn bg-gradientt text-light"><i class="fa-solid fa-eye pe-2"></i> View</button></a></td>
         <td><button class="btn btn-danger" onclick="deletItem(${i})"><i class="fa-solid fa-trash-can pe-2"></i> Delete</button></td>
-        <td><button class="btn btn-success" onclick="updateItem(${i})"><i class="fa-solid fa-pen pe-2"></i> Update</button></td>
+        <td><a href="#up"><button class="btn btn-success" onclick="updateItem(${i})"><i class="fa-solid fa-pen pe-2"></i> Update</button></a></td>
         </tr>
         <tr>
         `
@@ -109,7 +109,7 @@ function deletItem(i){
           content.splice(i,1);
           localStorage.content = JSON.stringify(content);
           display();
-        //   location.reload();
+          location.reload();
 
           swalWithBootstrapButtons.fire({
             title: "Deleted!",
