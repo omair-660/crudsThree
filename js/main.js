@@ -299,7 +299,7 @@ serch.onclick = function () {
 
 function validateForm(e) {
     var regex = {
-        nameInput : /^[a-zA-Z]{4,10}$/,
+        nameInput : /^[a-zA-Z\s]{4,10}$/,
         urlInput : /^https:\/\/[a-zA-Z0-9\-]+\.com$/,
     };
     if (regex[e.id].test(e.value)) {
