@@ -32,6 +32,9 @@
                             class="fa-solid fa-book-bookmark px-2 position-relative z-1"></i> Site Name</label>
                     <input oninput="validateForm(this)" type="text" id="nameInput" placeholder="Bookmark Name"
                         class="form-control bg-dark text-light border-black">
+                        <div class="alert alert-danger d-none mt-4 p-2 position-relative">
+                            <i>The name must be more than 3 and less than 11. </i>
+                        </div>
                 </div>
             </div>
             <div class="my-4">
@@ -40,6 +43,9 @@
                         URL</label>
                     <input oninput="validateForm(this)" type="url" id="urlInput" placeholder="URL Website "
                         class="form-control bg-dark text-light border-black">
+                        <div class="alert alert-danger d-none mt-4 p-2">
+                            <i>The link must include "https://" and the link name, and it must end with [.com]</i>
+                        </div>
                 </div>
             </div>
             <button id="addBtn" class="btn btnn w-100">Add Link</button>

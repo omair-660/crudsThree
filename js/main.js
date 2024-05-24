@@ -81,8 +81,8 @@ function display() {
         <tr>
         `
         total=i;
-        document.querySelector("tbody").innerHTML = cartona;
-    }
+      }
+      document.querySelector("tbody").innerHTML = cartona;
 }
 display();
 //*****************************************//
@@ -109,7 +109,12 @@ function deletItem(i){
           content.splice(i,1);
           localStorage.content = JSON.stringify(content);
           display();
-          location.reload();
+          deletaBtn.innerHTML = `Delete All (${total-1})`;
+if (content.length === 0) {
+  deletaBtn.classList.add("d-none");
+  
+}
+          // location.reload();
 
           swalWithBootstrapButtons.fire({
             title: "Deleted!",
@@ -221,7 +226,8 @@ deletaBtn.addEventListener("click",function () {
             // content.splice(0);
             localStorage.clear();
             display()
-            location.reload();
+        deletaBtn.classList.add("d-none");
+            // location.reload();
           swalWithBootstrapButtons.fire({
             title: "Deleted!",
             text: "Your file has been deleted.",
@@ -299,9 +305,11 @@ function validateForm(e) {
     if (regex[e.id].test(e.value)) {
         e.classList.remove("is-invalid");
         e.classList.add("is-valid");
-        console.log("matcch");
+        e.nextElementSibling.classList.add("d-none");
+                console.log("matcch");
     }else{
         e.classList.remove("is-valid");
         e.classList.add("is-invalid");
+        e.nextElementSibling.classList.remove("d-none");
     }
 };

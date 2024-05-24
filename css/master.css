@@ -160,4 +160,16 @@ i#searchIcon.open {
 .bg-gradientt:hover{
     background-image:  linear-gradient(66deg, rgba(255, 255, 255, 0.15) ,rgba(255, 255, 255, 0));
  }
- 
+ .alert::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: 3.5px;
+    background: transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #f8d7da;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    transition: 1s;
+    z-index: 4;
+}
