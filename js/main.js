@@ -109,7 +109,7 @@ function deletItem(i){
           content.splice(i,1);
           localStorage.content = JSON.stringify(content);
           display();
-          deletaBtn.innerHTML = `Delete All (${total-1})`;
+          deletaBtn.innerHTML = `Delete All (${content.length})`;
 if (content.length === 0) {
   deletaBtn.classList.add("d-none");
   
